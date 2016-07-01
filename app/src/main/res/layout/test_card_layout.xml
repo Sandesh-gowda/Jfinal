@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+<android.support.v7.widget.CardView
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+
+    card_view:cardElevation="2dp"
+    card_view:cardCornerRadius="8dp">
+    <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/buger"
+                        android:scaleType="fitXY"/>
+
+
+                <TextView
+                    android:paddingTop="8dp"
+                    android:paddingLeft="8dp"
+                    android:layout_width="match_parent"
+                    android:id="@+id/item_name"
+                    android:layout_below="@+id/image"
+                    android:layout_height="wrap_content"
+                    android:text="King Burger"
+                    android:textColor="@color/my_primary"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+                <TextView
+                    android:padding="8dp"
+                    android:id="@+id/item_discrp"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/item_name"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="Hamburgers are often served with cheese, lettuce, tomato, bacon, onion, pickles, and condiments such as mustard, mayonnaise, ketchup, relish, and chiles." />
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:id="@+id/text_cost"
+            android:padding="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="40"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:alpha="0.8"
+            android:background="@android:color/black" />
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+
+
