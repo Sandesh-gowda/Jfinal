@@ -17,8 +17,8 @@ android:id="@+id/item_card"
                 android:layout_height="wrap_content">
                 <ImageView
                     android:id="@+id/item_image"
-                        android:layout_width="fill_parent"
-                        android:layout_height="200dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
                         android:src="@drawable/buger"
                         android:scaleType="fitXY"/>
 

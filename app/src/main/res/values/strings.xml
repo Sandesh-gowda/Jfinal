@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DataParsing</string>
+    <string name="title_activity_snack_bar_test">SnackBarTest</string>
 </resources>
