@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+       android:id="@+id/imageView2"
+        android:background="@drawable/logo"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_car_bottom_layout"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text=""
+                android:layout_gravity="left"
+                android:layout_marginBottom="20dp"
+                android:textStyle="bold|italic"
+                android:textColor="@color/white"
+                android:id="@+id/aboutus" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/fourteen_sp"
+                android:text="
+Companies finding the right candidate and candidates finding the perfect job has become a lot harder in the competitive world we live in. Also, given the challenges of modern life, there are innumerable factors that govern the decision-making process and add to the complexities. To address these very issues, Jaldijob.in is here to short-circuit the entire process of recruitment with the 1st ever location-based job search which allows job seekers to look for a job close to you and the employers to manage the recruitment cycle. So, we facilitate everything from the first stage of hand-raising till the last stage of offer letter dispatchment using simple things technology has endowed us with – chat and video interaction. To ensure that we place quality before anything else, we have also consciously decided to focus on 2 fields – e-commerce and retail.
+Time is money. We value the time employers and prospective employees spend in recruitment/ job search respectively. Our attempt here is to short-circuit the process to make it beneficial to all entities involved. Here’s how we envision our role in your lives:
+Employers:We want to help you hire only the best in a short span of time. We understand the need to replenish your resources with almost null time lag and reduce the effort spent on recruitment of a single resource. This is an end-to-end app which is a solution for recruitment management system. You can follow up with candidates who have shown interest, have the first round of interview via video chat, pull and collate multiple reports and also roll out offer letters through this app.
+Job Seekers:There’s nothing better than having your workplace close to your home and we can vouch that anyone who has been through the rigours of urban commute would agree. This app lets you find a job sitting at any location, communicate easily with prospective employers with utmost privacy and get soft copies of offer letters to plan your exit better."
+
+                android:textColor="@color/black"
+
+                android:id="@+id/aboutusdoc" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="50dip"
+                android:text="Thank you"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

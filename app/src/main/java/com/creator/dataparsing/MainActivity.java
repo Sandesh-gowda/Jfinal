@@ -15,27 +15,28 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.StringRequest;
-import com.creator.dataparsing.adapter.MenuAdapter;
-import com.creator.dataparsing.model.Menu;
+import com.creator.dataparsing.adapter.JobDataAdapter;
+import com.creator.dataparsing.model.JobData;
+
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
+
 import java.util.List;
-import java.util.Map;
+
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
-    private ArrayList<Menu> arrayList;
-    private MenuAdapter adapter;
+    private ArrayList<JobData> arrayList;
+    private JobDataAdapter adapter;
 
     private String responseData;
-    public String URLMENU = "http://appshoppee.in/americanbyte/API/today_sp_mnu.php";
-    public String urlM = "http://appshoppee.in/americanbyte/API/menus_list.php";
-    public String urlD = "http://appshoppee.in/americanbyte/API/deset_mnu.php";
+    public String URLMENU = "http://jaldijob.in/test/test/v1/getjob";
+  //  public String urlM = "http://appshoppee.in/americanbyte/API/menus_list.php";
+  //  public String urlD = "http://appshoppee.in/americanbyte/API/deset_mnu.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.menu_list);
         initRecyclerView();
 
-makeSearchCall();
+        makeSearchCall();
 
 
 
@@ -70,7 +71,7 @@ makeSearchCall();
 
     private void makeSearchCall() {
        StringRequest jsonObjRequest = new StringRequest(Request.Method.GET,
-               URLMENU,
+               "http://www.jaldijob.in/test/test/v1/getjob/",
                 new Response.Listener<String>() {
 
 
@@ -102,11 +103,16 @@ makeSearchCall();
 
     private void setData(String response) {
         try {
-            Type listOfTestObject = new TypeToken<List<Menu>>() {
+
+
+            Type listOfTestObject = new TypeToken<List<JobData>>() {
             }.getType();
+
+
+
             Gson gson = new Gson();
-            ArrayList<Menu> Menulist = gson.fromJson(response,listOfTestObject);
-            if (Menulist == null || Menulist.size() == 0) {
+            ArrayList<JobData> jobList = gson.fromJson(response,listOfTestObject);
+            if (jobList == null || jobList.size() == 0) {
               //TODO
                 /*
                 * check whether it has some data or not ?
@@ -122,7 +128,7 @@ makeSearchCall();
                 *
                 * */
 
-               adapter = new MenuAdapter(Menulist,MainActivity.this);
+               adapter = new JobDataAdapter(jobList,MainActivity.this);
                recyclerView.setAdapter(adapter);
             }
         } catch (JsonSyntaxException e) {

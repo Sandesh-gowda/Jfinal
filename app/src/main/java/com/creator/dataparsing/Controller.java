@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.creator.dataparsing.preference.Spmanger;
 
 /**
  * Created by admin on 30/06/16.
@@ -14,7 +15,7 @@ public class Controller extends Application {
 
 
     private static Controller mInstance;
-
+private static Spmanger manager;
     private RequestQueue mRequestQueue;
 
     public static final String TAG = Controller.class
@@ -32,7 +33,14 @@ public class Controller extends Application {
         return mInstance;
     }
 
+    public Spmanger getPrefManager(String pref_key_value) {
+        if (manager == null) {
+            manager = new Spmanger(this, pref_key_value);
+        }
+        return manager;
 
+
+    }
 
     /*  sumeeth code goes here  */
 

@@ -4,25 +4,125 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".Controller"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/MyMaterialTheme">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            >
+
+
+        </activity>
+
+
+        <activity android:name=".HomeSearch"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+
+        <activity android:name=".SearchResult"
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+        <activity android:name=".registration.Registration_one"
+            android:screenOrientation="portrait"
+            >
+
+
+        </activity>
+
+        <activity android:name=".registration.Registration_two"
+            android:screenOrientation="portrait"
+            >
+</activity>
+
+
+        <activity android:name=".registration.Registration_three"
+            android:screenOrientation="portrait"
+            >
+
+
+        </activity>
+
+        <activity android:name=".registration.Registration_four"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".registration.Registration_five"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+
+        <activity android:name=".registration.Registration_six"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".registration.RegFinal"
+            android:screenOrientation="portrait">
+</activity>
+
+        <activity android:name=".registration.login"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".SplashScreen"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
-        <activity
-            android:name=".SnackBarTest"
-            android:label="@string/title_activity_snack_bar_test"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name=".fragment.HolderFragmentHome"
+            android:screenOrientation="portrait"
+            >
+
+
+
+
+        </activity>
+        <activity android:name=".HomeNavigatation"
+            android:screenOrientation="portrait">
+
+        </activity>
+
+        <activity android:name=".JobApplied"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".ListOfJobApplied"
+            android:screenOrientation="portrait">
+
+
+        </activity>
+
+        <activity android:name=".aboutus"
+
+            android:screenOrientation="portrait"
+            >
+
+        </activity>
+        <activity android:name=".forgotpassword"
+            android:screenOrientation="portrait"
+            >
+        </activity>
     </application>
 
 </manifest>

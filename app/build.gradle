@@ -8,8 +8,8 @@ android {
         applicationId "com.creator.dataparsing"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
     }
     buildTypes {
         release {
@@ -30,6 +30,22 @@ dependencies {
     compile 'org.immutables:gson:2.2-beta-5'
     compile 'com.android.support:cardview-v7:24.0.0'
     compile 'com.android.support:recyclerview-v7:24.0.0'
+
+
+    compile 'com.jakewharton:butterknife:8.2.1'
+
+    compile('com.mikepenz:materialdrawer:5.4.0@aar') {
+        transitive = true
+    }
+
+    dependencies {
+        compile 'com.github.clans:fab:1.6.4'
+    }
+    compile 'com.mikepenz:google-material-typeface:1.2.0.1@aar' //Google Material Icons
+    compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
+
+
+
 
 
 }
