@@ -123,6 +123,11 @@
             android:screenOrientation="portrait"
             >
         </activity>
+
+        <activity android:name=".Job_Details"
+            android:screenOrientation="portrait"
+            >
+        </activity>
     </application>
 
 </manifest>
